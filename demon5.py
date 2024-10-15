@@ -2,6 +2,7 @@ import aiohttp
 import asyncio
 from bs4 import BeautifulSoup
 import json
+import os
 
 class MangaTracker:
     def __init__(self, manga_names, manga_urls, debug=False):
