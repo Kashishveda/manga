@@ -29,3 +29,13 @@ jobs:
         CHAT_ID: ${{ secrets.CHAT_ID }}                # Use the secret
       run: |
         python demon5.py  # Replace with the name of your Python file
+
+    - name: Commit and Push Changes
+      run: |
+        git config --local user.email "ekveda24@gmail.com"  # Update with your email
+        git config --local user.name "Kashishveda"  # Update with your name
+        git add manga_chapters.json
+        git commit -m "Update manga chapters"
+        git push
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Automatically provided by GitHub Actions
