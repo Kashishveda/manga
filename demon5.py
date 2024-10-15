@@ -198,6 +198,7 @@ manga_names = [
     "The Heavenly Demon Can't Live a Normal Life",
     "The Indomitable Martial King",
     "The Knight King Who Returned With a God",
+    "The Magic Genius of the Marquis",
     "The Max Level Hero has Returned!",
     "The Nebula's Civilization",
     "The Primal Hunter",
