@@ -28,4 +28,4 @@ jobs:
         TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}  # Use the secret
         CHAT_ID: ${{ secrets.CHAT_ID }}                # Use the secret
       run: |
-        python your_script_name.py  # Replace with the name of your Python file
+        python demon5.py  # Replace with the name of your Python file
