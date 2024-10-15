@@ -71,7 +71,7 @@ class MangaTracker:
             else:
                 self.log(f"Manga '{manga_name}' not found on {site_name}.")
         
-        return latest_chapters
+        return site_name, latest_chapters
 
     async def send_telegram_message(self, message):
         """Send a message to the Telegram bot asynchronously."""
@@ -98,7 +98,7 @@ class MangaTracker:
             # Gather results for all sites
             results = await asyncio.gather(*tasks)
 
-            for result in results:
+            for site_name, result in results:
                 for manga_name, latest_chapter in result.items():
                     stored_chapter = self.chapter_info.get(manga_name, 0)
 
@@ -122,6 +122,7 @@ manga_names = [
     "Black Corporation: Joseon",
     "Bloodhound’s Regression Instinct",
     "Chronicles of the Demon Faction",
+    "Cosmic Heavenly Demon 3077",
     "Cultivating the supreme dantian",
     "Death God",
     "Doctor’s Rebirth",
@@ -152,6 +153,7 @@ manga_names = [
     "Martial inverse",
     "Martial Peak",  
     "Murim Login",
+    "My Clone is the Space Bug King",
     "My Lucky Encounter From The Game Turned Into Reality",
     "My Ruined Academy",
     "My School Life Pretending To Be a Worthless Person",
