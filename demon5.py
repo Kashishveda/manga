@@ -8,8 +8,8 @@ class MangaTracker:
         self.manga_names = manga_names
         self.manga_chapters_file = 'manga_chapters.json'
         self.chapter_info = self.load_chapter_info()
-        self.telegram_token = "7710671633:AAFlEecPu60ZSauYAw-J_9q28nRVxP0F1BY"
-        self.chat_id = "7829963464"
+        self.telegram_token = os.getenv("TELEGRAM_TOKEN")  # This fetches the secret value
+        self.chat_id = os.getenv("CHAT_ID")                # This fetches the chat ID
         self.manga_urls = manga_urls
         self.debug = debug
 
