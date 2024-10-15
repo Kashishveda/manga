@@ -103,7 +103,7 @@ class MangaTracker:
                     stored_chapter = self.chapter_info.get(manga_name, 0)
 
                     if latest_chapter > stored_chapter:
-                        message = f"Update available for '{manga_name}': Chapter {latest_chapter} is now out! Check {site_name}"
+                        message = f"Git: Update available for '{manga_name}': Chapter {latest_chapter} is now out! Check {site_name}"
                         await self.send_telegram_message(message)
                         self.chapter_info[manga_name] = latest_chapter  # Update stored chapter
 
