@@ -2,7 +2,7 @@ name: Manga Tracker Automation
 
 on:
   schedule:
-    - cron: '*/30 * * * *'  # Every 30 minutes
+    - cron: '*/20 * * * *'  # Every 30 minutes
   workflow_dispatch:  # Allows for manual triggering of the workflow
 
 jobs:
